@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {Link} from 'react-router-dom';
+import {getAuth} from 'firebase/auth';
 import { Input, Button } from 'antd';
 import { input_container } from './Elements/CreateSaleElements.js';
 import { input_style, button_style } from './Elements/RegisterElements.js';

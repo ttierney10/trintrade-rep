@@ -1,0 +1,74 @@
+[debug] [2022-04-27T18:43:59.053Z] ----------------------------------------------------------------------
+[debug] [2022-04-27T18:43:59.054Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2022-04-27T18:43:59.054Z] CLI Version:   10.7.1
+[debug] [2022-04-27T18:43:59.054Z] Platform:      darwin
+[debug] [2022-04-27T18:43:59.054Z] Node Version:  v16.14.0
+[debug] [2022-04-27T18:43:59.058Z] Time:          Wed Apr 27 2022 14:43:59 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-27T18:43:59.058Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-27T18:43:59.265Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-27T18:43:59.266Z] > authorizing via signed-in user (tedtierney37@gmail.com)
+[debug] [2022-04-27T18:43:59.266Z] [iam] checking project trintrade-db for permissions ["firebase.projects.get"]
+[debug] [2022-04-27T18:43:59.280Z] > refreshing access token with scopes: []
+[debug] [2022-04-27T18:43:59.280Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-27T18:43:59.464Z] <<< HTTP RESPONSE 200 {"date":"Wed, 27 Apr 2022 18:43:59 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-27T18:43:59.581Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/trintrade-db:testIamPermissions [none]
+[debug] [2022-04-27T18:43:59.581Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/trintrade-db:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-04-27T18:43:59.735Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/trintrade-db:testIamPermissions 200
+[debug] [2022-04-27T18:43:59.735Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/trintrade-db:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-04-27T18:43:59.735Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/trintrade-db [none]
+[debug] [2022-04-27T18:44:00.003Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/trintrade-db 200
+[debug] [2022-04-27T18:44:00.003Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/trintrade-db {"projectId":"trintrade-db","projectNumber":"595286794420","displayName":"trinity-trade-db","name":"projects/trintrade-db","resources":{"hostingSite":"trintrade-db","realtimeDatabaseInstance":"trintrade-db-default-rtdb","storageBucket":"trintrade-db.appspot.com","locationId":"us-east4"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from '/Users/tedtierney/Documents/Programming/React/trintrade'...
+[info] 
+[debug] [2022-04-27T18:44:00.008Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/trintrade-db/sites 
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-04-27T18:44:00.024Z] defaultcredentials: writing to file /Users/tedtierney/.config/firebase/tedtierney37_gmail_com_application_default_credentials.json
+[debug] [2022-04-27T18:44:00.026Z] Setting GAC to /Users/tedtierney/.config/firebase/tedtierney37_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/tedtierney/.config/firebase/tedtierney37_gmail_com_application_default_credentials.json"}}
+[debug] [2022-04-27T18:44:00.029Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/trintrade-db/adminSdkConfig [none]
+[debug] [2022-04-27T18:44:00.340Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/trintrade-db/adminSdkConfig 200
+[debug] [2022-04-27T18:44:00.340Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/trintrade-db/adminSdkConfig {"projectId":"trintrade-db","databaseURL":"https://trintrade-db-default-rtdb.firebaseio.com","storageBucket":"trintrade-db.appspot.com","locationId":"us-east4"}
+[debug] [2022-04-27T18:44:00.665Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/trintrade-db/sites 200
+[debug] [2022-04-27T18:44:00.665Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/trintrade-db/sites {"sites":[{"name":"projects/595286794420/sites/trintrade-db","defaultUrl":"https://trintrade-db.web.app","appId":"1:595286794420:web:c6bbe0d19bd46b36d2b7e1","type":"DEFAULT_SITE"}]}
+[debug] [2022-04-27T18:44:00.665Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/trintrade-db/webApps/1:595286794420:web:c6bbe0d19bd46b36d2b7e1/config [none]
+[debug] [2022-04-27T18:44:01.177Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/trintrade-db/webApps/1:595286794420:web:c6bbe0d19bd46b36d2b7e1/config 200
+[debug] [2022-04-27T18:44:01.178Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/trintrade-db/webApps/1:595286794420:web:c6bbe0d19bd46b36d2b7e1/config {"projectId":"trintrade-db","appId":"1:595286794420:web:c6bbe0d19bd46b36d2b7e1","databaseURL":"https://trintrade-db-default-rtdb.firebaseio.com","storageBucket":"trintrade-db.appspot.com","locationId":"us-east4","apiKey":"AIzaSyDmCGEbshPcFpsM-dNr9pFSlkPc85n5TQ8","authDomain":"trintrade-db.firebaseapp.com","messagingSenderId":"595286794420","measurementId":"G-GBPE2R18L9"}
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port... {"metadata":{"emulator":{"name":"hosting"},"message":"\u001b[33mhosting: \u001b[39mPort 5000 is not available. Trying another port..."}}
+[info] i  functions: Watching "/Users/tedtierney/Documents/Programming/React/trintrade/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/tedtierney/Documents/Programming/React/trintrade/functions\" for Cloud Functions..."}}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting: Local server: http://localhost:5005 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5005\u001b[22m\u001b[24m"}}
+[debug] [2022-04-27T18:44:01.302Z] Validating nodejs source
+[debug] [2022-04-27T18:44:01.996Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-04-27T18:44:01.997Z] Building nodejs source
+[debug] [2022-04-27T18:44:01.997Z] Analyzing nodejs backend spec
+[info] i  hosting: 127.0.0.1 - - [27/Apr/2022:18:44:11 +0000] "GET / HTTP/1.1" 200 593 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Apr/2022:18:44:11 +0000] \"GET / HTTP/1.1\" 200 593 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Apr/2022:18:44:11 +0000] "GET /index.css HTTP/1.1" 404 1808 "http://localhost:5005/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Apr/2022:18:44:11 +0000] \"GET /index.css HTTP/1.1\" 404 1808 \"http://localhost:5005/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Apr/2022:18:44:11 +0000] "GET /src/index.js HTTP/1.1" 404 1808 "http://localhost:5005/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Apr/2022:18:44:11 +0000] \"GET /src/index.js HTTP/1.1\" 404 1808 \"http://localhost:5005/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Apr/2022:18:44:12 +0000] "GET /favicon.ico HTTP/1.1" 404 1808 "http://localhost:5005/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Apr/2022:18:44:12 +0000] \"GET /favicon.ico HTTP/1.1\" 404 1808 \"http://localhost:5005/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Apr/2022:18:44:26 +0000] "GET / HTTP/1.1" 200 593 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Apr/2022:18:44:26 +0000] \"GET / HTTP/1.1\" 200 593 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Apr/2022:18:44:26 +0000] "GET /index.css HTTP/1.1" 404 1808 "http://localhost:5005/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Apr/2022:18:44:26 +0000] \"GET /index.css HTTP/1.1\" 404 1808 \"http://localhost:5005/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15\""}}
+[info] i  hosting: 127.0.0.1 - - [27/Apr/2022:19:01:22 +0000] "GET / HTTP/1.1" 200 593 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [27/Apr/2022:19:01:22 +0000] \"GET / HTTP/1.1\" 200 593 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15\""}}
