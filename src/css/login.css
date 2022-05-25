@@ -1,0 +1,102 @@
+.page_container{
+    height: 2000px;
+    margin-top: 15px;
+    overflow-y: scroll;
+}
+.login_container{
+    overflow-y: scroll;
+    height: 2000px;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.image{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.login_form{
+    margin-top: -30px;
+    width: 100%;
+    height: 500px;
+    background-color: white;
+}
+.login_title{
+    height: 48px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: #000;
+}
+.input_container{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    font-weight: 700; 
+}
+.username_input, .password_input{
+    width: calc(100% - 20px);
+    height: 48px;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.submit_button{
+    height: 48px;
+    background-color: #708BFF;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    border-style: hidden;
+    border-color: white;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .page_container{
+        height: 2000px;
+        overflow-y: scroll;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 15px;
+        width: auto;
+    }
+    .login_container{
+        height: 2000px;
+        overflow-y: scroll;
+        display: inline-block;
+    }
+    .image{
+        border-style: solid none solid solid;
+        border-radius: 25px 0px 0px 25px;
+        border-color: #708BFF;
+        width: 50%;
+        height: 500px;
+        object-fit: cover;
+        display: inline-block;
+    }
+    .login_form{
+        border-radius: 0px 25px 25px 0px;
+        border-style: solid;
+        border-color: #708BFF;
+        padding-top: -15px;
+        margin-top: 0px;
+        vertical-align: top;
+        padding-left: 5px;
+        width: 50%;
+        display: inline-block;
+    }
+    .login_title{
+        margin-top: -0px;
+    }
+}

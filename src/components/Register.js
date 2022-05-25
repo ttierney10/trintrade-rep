@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import {title_box, page_title, input_container} from './Elements/CreateSaleElements.js';
+import React, { useState, useEffect } from "react";
+import _ from 'lodash';
+import {title_box, page_title, input_container} from '../css/CreateSaleElements.js';
 import {input_style, button_style, header_style, header_title_style, error_style, footer_style, 
-        thanks_text, check_style, verify_text, signin_button} from './Elements/RegisterElements.js';
+        thanks_text, check_style, verify_text, signin_button} from '../css/RegisterElements.js';
 import {Input, Button} from 'antd';
 import {getAuth, createUserWithEmailAndPassword, sendEmailVerification} from "firebase/auth";
-import {getFirestore, collection, addDoc} from 'firebase/firestore';
+import {getFirestore, collection, addDoc, getDocs} from 'firebase/firestore';
 import {app} from "../firebase.js";
 
 export default function Register() {
@@ -26,6 +27,7 @@ export default function Register() {
     const [emailInUse, setEmailInUse] = useState(false)
     const [invalidEmail, setInvalidEmail] = useState(false)
     const email_check = "trincoll.edu"
+    const [users, setUsers] = useState([])
 
     const onFNameChange = (event) => {
         setFname(event.target.value)
@@ -37,17 +39,44 @@ export default function Register() {
     }
     const onUsernameChange = (event) => {
         setUsername(event.target.value)
+        checkUsername(username)
         setusernameInput(true)
     }
     const onTrinEmailChange = (event) => setTrinEmail(event.target.value)
     const onCfmPasswordChange = (event) => setCfmPassword(event.target.value)
     const onPasswordChange = (event) => setPassword(event.target.value)
     
+    function checkUsername(name){
+        console.log(users)
+        _.map(users, (user) => {
+            let username = user.payload.username
+            console.log(username)
+
+        })
+    }
+
+    useEffect(() => {
+        getDocs(collection(db, "users")).then(users => {
+            setUsers([])
+            users.forEach((user) => {
+                let data = user.data()
+                let {id} = user
+
+                let payload = {
+                    id, 
+                    ...data
+                }
+
+                setUsers((users) => [...users, payload])
+            })
+        });
+    })
+
     /*
         discuss with ben how we want to do the error protocols. 
         alternatively we could have simultaneous errors next to each incorrectly
         filled out field instead of a message at the end about the first
-        error found
+        error found !!!!! decided we will put directly under each input field
     */
     function userErrorCheck(){
         var ret = false
@@ -58,7 +87,7 @@ export default function Register() {
         else if(!lnameInput){
             setErrorMessage("please enter a last name")
             ret = true
-        }//add function to ensure username is unique!!!!!!!!!!!!!!!!
+        }//add function to ensure username is unique!!!!!!!!!!!!!!!! put in username change function
         else if(!usernameInput){
             setErrorMessage("please enter a username")
             ret = true
